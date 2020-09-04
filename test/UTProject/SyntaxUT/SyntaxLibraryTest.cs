@@ -102,9 +102,9 @@ public interface Test7{}
 public struct Test8{}
 }";
             var visitor = SyntaxRootVisitor.CreateFrom(text);
-            Assert.Equal("Test2", visitor.NamespaceNode(0).ClassNode(0).NameScript());
+            Assert.Equal("Test2", visitor.NamespaceNode(0).ClassNode(0).Name());
             Assert.Equal($"public interface Test7{{}}", visitor.NamespaceNode(1).InterfaceNode(0).FullScript().Trim());
-            Assert.Equal("Test1", visitor.NamespaceNode(0).EnumNode(0).NameScript());
+            Assert.Equal("Test1", visitor.NamespaceNode(0).EnumNode(0).Name());
             Assert.Equal($"public enum Test5{{}}", visitor.NamespaceNode(1).EnumNode(0).FullScript().Trim());
         }
 

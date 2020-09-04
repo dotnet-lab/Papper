@@ -32,13 +32,13 @@ namespace Microsoft.CodeAnalysis
         }
 
 
-        public static string NameScript(this BaseTypeDeclarationSyntax node)
+        public static string Name(this BaseTypeDeclarationSyntax node)
         {
             return node == default ? default : node.Identifier.Text;
         }
 
 
-        public static string ModifiersScript(this MemberDeclarationSyntax node)
+        public static string Modifiers(this MemberDeclarationSyntax node)
         {
             return node == default ? default : node.Modifiers.ToFullString();
         }
@@ -50,7 +50,7 @@ namespace Microsoft.CodeAnalysis
         }
 
 
-        public static string BaseListScript(this BaseTypeDeclarationSyntax node)
+        public static string BaseListFullScript(this BaseTypeDeclarationSyntax node)
         {
             return node == default ? default : node.BaseList.ToFullString();
         }

@@ -24,7 +24,7 @@ namespace Microsoft.CodeAnalysis
             var nodes = node.FindNodes<EnumDeclarationSyntax>();
             foreach (var item in nodes)
             {
-                if (item.NameScript() == name)
+                if (item.Name() == name)
                 {
                     return item;
                 }
