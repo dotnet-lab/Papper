@@ -52,6 +52,12 @@ namespace Microsoft.CodeAnalysis
             return default;
         }
 
+
+        /// <summary>
+        /// 获取所有字段定义
+        /// </summary>
+        /// <param name="typeDeclarationSyntax"></param>
+        /// <returns></returns>
         public static IEnumerable<string> FullScripts(this TypeDeclarationSyntax typeDeclarationSyntax)
         {
             var result = FieldNodes(typeDeclarationSyntax);
@@ -63,6 +69,11 @@ namespace Microsoft.CodeAnalysis
         }
 
 
+        /// <summary>
+        /// 获取字段的声明字符串
+        /// </summary>
+        /// <param name="fieldDeclarationSyntax"></param>
+        /// <returns></returns>
         public static string DeclarationText(this FieldDeclarationSyntax fieldDeclarationSyntax)
         {
 
